@@ -1,16 +1,16 @@
 {
-  "name": "karin-plugin-template-ts",
-  "version": "1.0.0",
-  "author": "Lain",
+  "name": "karin-plugin-miao",
+  "version": "0.0.1",
+  "author": "qsyhh",
   "type": "module",
-  "description": "karin plugin template",
-  "homepage": "https://github.com/KarinJS/karin-plugin-template-ts",
+  "description": "karin mihuyo plugin form Yunzai plugin miao-plugin",
+  "homepage": "https://github.com/qsyhh/karin-plugin-miao",
   "bugs": {
-    "url": "https://github.com/KarinJS/karin-plugin-template-ts/issues"
+    "url": "https://github.com/qsyhh/karin-plugin-miao/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KarinJS/karin-plugin-template-ts.git"
+    "url": "git+https://github.com/qsyhh/karin-plugin-miao.git"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",

@@ -1,6 +1,6 @@
 {
   "name": "karin-plugin-miao",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "qsyhh",
   "type": "module",
   "description": "karin mihuyo plugin form Yunzai plugin miao-plugin",
@@ -13,20 +13,26 @@
     "url": "git+https://github.com/qsyhh/karin-plugin-miao.git"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "app": "node lib/app.js",
+    "build": "tsup",
+    "dev": "cross-env EBV_FILE=\"development.env\" node --import tsx src/app.ts",
     "pub": "npm publish --access public"
   },
   "main": "lib/index.js",
   "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^20.17.8",
+    "cross-env": "^7.0.3",
     "eslint": "^9.7.0",
     "neostandard": "^0.11.9",
-    "node-karin": "0.12.25-beta.pr.194.1-1732881372",
-    "tsc-alias": "^1.8.10",
+    "node-karin": "*",
+    "tsup": "^8.5.0",
     "tsx": "^4.19.2",
     "typescript": "^5.5.3"
   },
   "karin": {
+    "main": "src/index.ts",
     "apps": [
       "lib/apps"
     ],
@@ -45,11 +51,9 @@
   "files": [
     "/lib/**/*.js",
     "/lib/**/*.d.ts",
-    "/config/*.yaml",
+    "/config/*.json",
     "resources",
-    "LICENSE",
-    "package.json",
-    "README.md"
+    "!lib/app.js"
   ],
   "publishConfig": {
     "access": "public",
